@@ -1,0 +1,12 @@
+[
+  {
+    "device_id": "",
+    "temperature": 200,
+    "timestamp": null
+  },
+  {
+    "device_id": "sensor_x",
+    "temperature": -999,
+    "timestamp": "bad-format"
+  }
+]
