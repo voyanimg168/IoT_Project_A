@@ -1,4 +1,5 @@
-- Python
-- Flask / FastAPI
-- Requests
-- Pytest
+Python
+Flask 
+FastAPI
+Requests
+Pytest

@@ -1,12 +1,12 @@
 from flask import Flask, request, jsonify
 from datetime import datetime
-from typing import Dict, Any
+from typing import List, Dict, Any
 # from src.utils import is_valid_temperature
 
 app = Flask(__name__)
 
 # Simple in-memory log (QA-friendly, no DB needed)
-data_store: list[dict[str, Any]] = []
+data_store: List[Dict[str, Any]] = []
 
 # -----------------------------
 # Validation logic
