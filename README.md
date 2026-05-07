@@ -1,14 +1,22 @@
 # 🚀 IoT Data Validation & Automation Testing Framework
 
+![Run Tests](https://github.com/voyanimg168/IoT_Project_A/actions/workflows/test.yml/badge.svg)
+
 ## 📌 Overview
 
-This project simulates a real-world **IoT data ingestion system** and demonstrates how automated testing ensures **data integrity, reliability, and robustness**.
+This project simulates a real-world **IoT data ingestion system** and demonstrates how automated testing ensures **data integrity, reliability, and robustness** for devices like Nest thermostat, smart HVAC sensors, cold chain monitors, weather stations, and greenhouse monitors. The focus is on **QA automation and validation**, making it directly relevant for **QA Engineer / SDET roles in IoT and backend systems**.
 
 It includes:
 
 - A REST API for ingesting IoT sensor data
 - A device simulator generating realistic and faulty inputs
 - A comprehensive automated test suite using Pytest
+
+**Key test scenarios:**
+
+- Boundary min/max temperatures — critical for compliance (e.g. FDA cold chain requirements)
+- High-frequency requests — simulating sensors that ping constantly
+- Missing device IDs — essential when tracking hundreds of physical sensors in the field
 
 The focus is on **QA automation and validation**, making this project highly relevant for **QA Engineer / SDET roles in IoT and backend systems**.
 
@@ -134,6 +142,8 @@ source .venv/bin/activate
 python -m pytest tests/ -v
 # OR with tests/conftest.py, just one terminal needed
 python -m pytest tests/ -v
+# OR erase ci.yml, uncomment conftest.py, add test.yml, just one terminal needed
+python -m pytest tests/ -v
 ```
 
 Server runs at:
@@ -250,7 +260,7 @@ IoT Project/
 
 ## 💬 How to Explain This Project (Interview Ready)
 
-> “I built an IoT data ingestion system with an automated test suite that validates both valid and invalid device inputs.
+> “I built an IoT data ingestion API system with an automated test suite that validates both valid and invalid device inputs.
 > The tests cover functional, boundary, and failure scenarios, and all 14 test cases pass consistently.
 > This demonstrates that the system enforces data integrity and behaves reliably under real-world conditions.”
 
