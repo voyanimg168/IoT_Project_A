@@ -126,7 +126,14 @@ pip install -r requirements.txt
 ### Start API Server
 
 ```bash
+# Terminal 1
+source .venv/bin/activate
 python src/api_server.py
+# Terminal 2
+source .venv/bin/activate
+python -m pytest tests/ -v
+# OR with tests/conftest.py, just one terminal needed
+python -m pytest tests/ -v
 ```
 
 Server runs at:
